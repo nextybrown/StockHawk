@@ -6,11 +6,10 @@ import android.content.Intent;
 
 import timber.log.Timber;
 
-public class QuoteJobService extends JobService {
-
+public class QuoteJobService extends com.firebase.jobdispatcher.JobService{
 
     @Override
-    public boolean onStartJob(JobParameters jobParameters) {
+    public boolean onStartJob(com.firebase.jobdispatcher.JobParameters job) {
         Timber.d("Intent handled");
         Intent nowIntent = new Intent(getApplicationContext(), QuoteIntentService.class);
         getApplicationContext().startService(nowIntent);
@@ -18,9 +17,7 @@ public class QuoteJobService extends JobService {
     }
 
     @Override
-    public boolean onStopJob(JobParameters jobParameters) {
+    public boolean onStopJob(com.firebase.jobdispatcher.JobParameters job) {
         return false;
     }
-
-
 }

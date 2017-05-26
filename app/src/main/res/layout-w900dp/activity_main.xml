@@ -9,21 +9,32 @@
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/icons">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingLeft="@dimen/activity_horizontal_margin_medium"
-            android:paddingRight="@dimen/activity_horizontal_margin_medium"
-            tools:listitem="@layout/list_item_quote"
+            android:orientation="horizontal"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin_medium"
+                android:paddingRight="@dimen/activity_horizontal_margin_medium"
+                tools:listitem="@layout/list_item_quote"
 
-            />
+                />
+            <FrameLayout
+                android:id="@+id/quotes_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
 
     </android.support.v4.widget.SwipeRefreshLayout>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -33,7 +44,6 @@
         android:layout_margin="16dp"
         android:onClick="button"
         android:src="@drawable/fab_plus"
-        android:contentDescription="@string/add_stock_button"
         app:backgroundTint="@color/primary_dark"
         app:borderWidth="0dp"
         app:elevation="6dp"

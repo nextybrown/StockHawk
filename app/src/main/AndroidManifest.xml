@@ -12,16 +12,22 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.MainActivity">
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.MainActivity"></activity>
 
         <service
             android:name=".sync.QuoteIntentService"
@@ -37,6 +43,18 @@
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name=".QuotesListActivity"
+            android:label="@string/title_quotes_list"></activity>
+        <activity
+            android:name=".QuotesDetailActivity"
+            android:label="@string/title_quotes_detail"
+            android:parentActivityName=".QuotesListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.udacity.stockhawk.QuotesListActivity" />
+        </activity>
     </application>
 
 </manifest>

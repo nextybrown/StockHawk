@@ -7,10 +7,18 @@
 
 
     <string name="pref_display_mode_key">displayMode</string>
-    <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
+    <string name="pref_display_mode_default">@string/pref_display_mode_percentage</string>
 
+    <string name="pref_display_mode_absolute">absolute</string>
     <string name="pref_display_mode_absolute_key">absolute</string>
+    <string name="pref_display_mode_percentage">percentage</string>
     <string name="pref_display_mode_percentage_key">percentage</string>
+
+
+    <string name="pref_display_mode_percentage_summary">Percentage</string>
+    <string name="pref_display_mode_absolute_summary">Absolute</string>
+    <string name="pref_display_mode_title">DisplayMode</string>
+
 
     <string name="default_stocks_yahoo">YHOO</string>
     <string name="default_stocks_apple">AAPL</string>
@@ -31,5 +39,9 @@
 
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_quotes_list">Quotes</string>
+    <string name="title_quotes_detail">Quotes Detail</string>
+    <string name="add_stock_button">add new Stock</string>
 
 </resources>

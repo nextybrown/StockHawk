@@ -6,4 +6,12 @@
         <item>@string/default_stocks_microsoft</item>
         <item>@string/default_stocks_facebook</item>
     </string-array>
+    <array name="pref_display_mode_entries">
+        <item>@string/pref_display_mode_absolute_summary</item>
+        <item>@string/pref_display_mode_percentage_summary</item>
+    </array>
+    <array name="pref_display_mode_entry_values">
+        <item >@string/pref_display_mode_absolute</item>
+        <item >@string/pref_display_mode_percentage</item>
+    </array>
 </resources>
