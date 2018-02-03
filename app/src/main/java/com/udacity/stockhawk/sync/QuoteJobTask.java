@@ -52,7 +52,7 @@ public class QuoteJobTask {
                 return;
             }
 
-            quotes = YahooFinance.get(stockArray);
+            //quotes = YahooFinance.get(stockArray);
             Timber.d(quotes.toString());
 
 
